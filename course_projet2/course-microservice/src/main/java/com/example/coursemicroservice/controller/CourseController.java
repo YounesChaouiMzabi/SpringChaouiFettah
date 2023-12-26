@@ -3,6 +3,7 @@ package com.example.coursemicroservice.controller;
 
 import com.example.coursemicroservice.dto.CourseDto;
 import com.example.coursemicroservice.model.Course;
+import com.example.coursemicroservice.model.MonComposant;
 import com.example.coursemicroservice.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,14 @@ public class CourseController {
 
     @Autowired
     private CourseService courseService ;
+
+    @Autowired
+    private MonComposant myComponent;
+
+    @GetMapping("/message")
+    public String getMessage() {
+        return myComponent.getMessage();
+    }
 
 
     @GetMapping
@@ -48,3 +57,5 @@ public class CourseController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
+
+//je me suis arreté f la partie RefreshScope
