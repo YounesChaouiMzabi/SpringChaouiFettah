@@ -8,10 +8,9 @@ import org.springframework.stereotype.Component;
 @RefreshScope
 public class MonComposant {
 
-    @Value("${message}")
-    private String message;
 
-    public String getMessage() {
-        return message;
-    }
+
+//    public String getMessage() {
+//        return message;
+//    }
 }
